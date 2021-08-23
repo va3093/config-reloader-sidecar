@@ -85,7 +85,7 @@ In order for the sidecar to find which process to send the signal to, the Pod ne
 
 ### Update speed
 
-You might noticed when editing a Secret or ConfigMap that your process isn't being reloaded immediately.
+You might notice when editing a Secret or ConfigMap that your process isn't being reloaded immediately.
 
 This is because the projected values of ConfigMaps and Secrets are not updated exactly when the underlying object changes, but instead they're [updated periodically](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/#mounted-configmaps-are-updated-automatically) according to the `syncFrequency` argument to the [kubelet config](https://kubernetes.io/docs/reference/config-api/kubelet-config.v1beta1/). This defaults to 1 minute.
 
